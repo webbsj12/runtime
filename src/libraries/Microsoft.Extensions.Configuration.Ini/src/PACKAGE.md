@@ -1,49 +1,27 @@
 ## About
 
-INI configuration provider implementation for [Microsoft.Extensions.Configuration](https://www.nuget.org/packages/Microsoft.Extensions.Configuration/). This package enables you to read configuration parameters from [INI files](https://en.wikipedia.org/wiki/INI_file). You can use [IniConfigurationExtensions.AddIniFile](https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iniconfigurationextensions.addinifile) extension method on `IConfigurationBuilder` to add INI configuration provider to the configuration builder.
+<!-- A description of the package and where one can find more documentation -->
 
-For more information, see the documentation: [INI configuration provider](https://learn.microsoft.com/dotnet/core/extensions/configuration-providers#ini-configuration-provider).
+## Key Features
 
-## Example
-The following example shows how to read the application configuration from INI file.
+<!-- The key features of this package -->
 
-```cs
-using System;
-using Microsoft.Extensions.Configuration;
+## How to Use
 
-class Program
-{
-    static void Main()
-    {
-        // Build a configuration object from INI file
-        IConfiguration config = new ConfigurationBuilder()
-            .AddIniFile("appsettings.ini")
-            .Build();
+<!-- A compelling example on how to use this package with code, as well as any specific guidelines for when to use the package -->
 
-        // Get a configuration section
-        IConfigurationSection section = config.GetSection("Settings");
+## Main Types
 
-        // Read configuration values
-        Console.WriteLine($"Server: {section["Server"]}");
-        Console.WriteLine($"Database: {section["Database"]}");
-    }
-}
-```
+<!-- The main types provided in this library -->
 
-To run this example, include an `appsettings.ini` file with the following content in your project:
+## Addtional Documentation
 
-```
-[Settings]
-Server=example.com
-Database=Northwind
-```
+<!-- Links to further documentation -->
 
-You can include a configuration file using a code like this in your `.csproj` file:
+## Related Packages
 
-```xml
-<ItemGroup>
-  <Content Include="appsettings.ini">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-  </Content>
-</ItemGroup>
-```
+<!-- The related packages associated with this package -->
+
+## Feedback & Contributing
+
+<!-- How to provide feedback on this package and contribute to it -->

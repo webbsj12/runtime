@@ -1,9 +1,27 @@
 ## About
 
-Provides a base class for file-based configuration providers used with [Microsoft.Extensions.Configuration](https://www.nuget.org/packages/Microsoft.Extensions.Configuration/) and extension methods for configuring them.
+<!-- A description of the package and where one can find more documentation -->
 
-For more information, see the documentation:
+## Key Features
 
-- [Configuration in .NET](https://learn.microsoft.com/dotnet/core/extensions/configuration)
-- [Microsoft.Extensions.Configuration.FileConfigurationProvider](https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.fileconfigurationprovider)
-- [Microsoft.Extensions.Configuration.FileConfigurationExtensions](https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.fileconfigurationextensions)
+<!-- The key features of this package -->
+
+## How to Use
+
+<!-- A compelling example on how to use this package with code, as well as any specific guidelines for when to use the package -->
+
+## Main Types
+
+<!-- The main types provided in this library -->
+
+## Addtional Documentation
+
+<!-- Links to further documentation -->
+
+## Related Packages
+
+<!-- The related packages associated with this package -->
+
+## Feedback & Contributing
+
+<!-- How to provide feedback on this package and contribute to it -->

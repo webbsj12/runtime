@@ -1,61 +1,27 @@
 ## About
 
-XML configuration provider implementation for [Microsoft.Extensions.Configuration](https://www.nuget.org/packages/Microsoft.Extensions.Configuration/). This package enables you to read configuration parameters from XML files. You can use [XmlConfigurationExtensions.AddXmlFile](https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.xmlconfigurationextensions.addxmlfile) extension method on `IConfigurationBuilder` to add XML configuration provider to the configuration builder.
+<!-- A description of the package and where one can find more documentation -->
 
-For more information, see the documentation: [XML configuration provider](https://learn.microsoft.com/dotnet/core/extensions/configuration-providers#xml-configuration-provider).
+## Key Features
 
-## Example
-The following example shows how to read the application configuration from XML file.
+<!-- The key features of this package -->
 
-```cs
-using System;
-using Microsoft.Extensions.Configuration;
+## How to Use
 
-class Program
-{
-    static void Main()
-    {
-        // Build a configuration object from XML file
-        IConfiguration config = new ConfigurationBuilder()
-            .AddXmlFile("appsettings.xml")
-            .Build();
+<!-- A compelling example on how to use this package with code, as well as any specific guidelines for when to use the package -->
 
-        // Get a configuration section
-        IConfigurationSection section = config.GetSection("Settings");
+## Main Types
 
-        // Read simple values
-        Console.WriteLine($"Server: {section["Server"]}");
-        Console.WriteLine($"Database: {section["Database"]}");
+<!-- The main types provided in this library -->
 
-        // Read nested values
-        Console.WriteLine($"IPAddress: {section["Endpoint:IPAddress"]}");
-        Console.WriteLine($"Port: {section["Endpoint:Port"]}");
-    }
-}
-```
+## Addtional Documentation
 
-To run this example, include an `appsettings.xml` file with the following content in your project:
+<!-- Links to further documentation -->
 
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<configuration>
-  <Settings>
-    <Server>example.com</Server>
-    <Database>Northwind</Database>
-    <Endpoint>
-      <IPAddress>192.168.0.10</IPAddress>
-      <Port>80</Port>
-    </Endpoint>
-  </Settings>  
-</configuration>
-```
+## Related Packages
 
-You can include a configuration file using a code like this in your `.csproj` file:
+<!-- The related packages associated with this package -->
 
-```xml
-<ItemGroup>
-  <Content Include="appsettings.xml">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-  </Content>
-</ItemGroup>
-```
+## Feedback & Contributing
+
+<!-- How to provide feedback on this package and contribute to it -->

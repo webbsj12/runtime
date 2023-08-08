@@ -1,65 +1,27 @@
 ## About
 
-Provides types that support using XML configuration files (`app.config`). This package exists only to support migrating existing .NET Framework code that already uses System.Configuration. When writing new code, use another configuration system instead, such as [Microsoft.Extensions.Configuration](https://www.nuget.org/packages/Microsoft.Extensions.Configuration/).
+<!-- A description of the package and where one can find more documentation -->
 
-For more information, see the documentation:
+## Key Features
 
-- [Configure apps by using configuration files](https://docs.microsoft.com/dotnet/framework/configure-apps/)
-- [System.Configuration namespace](https://docs.microsoft.com/dotnet/api/system.configuration)
-- [System.Configuration.Configuration](https://docs.microsoft.com/dotnet/api/system.configuration.configuration)
-- [System.Configuration.ConfigurationManager](https://docs.microsoft.com/dotnet/api/system.configuration.configurationmanager)
+<!-- The key features of this package -->
 
-## Example
+## How to Use
 
-The following example shows how to read and modify the application configuration settings.
+<!-- A compelling example on how to use this package with code, as well as any specific guidelines for when to use the package -->
 
-```cs
-using System;
-using System.Configuration;
+## Main Types
 
-class Program
-{
-    static void Main()
-    {
-        try
-        {
-            // Open current application configuration
-            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            KeyValueConfigurationCollection section = config.AppSettings.Settings;
+<!-- The main types provided in this library -->
 
-            // Print settings from configuration file
-            foreach (string key in section.AllKeys)
-            {
-                Console.WriteLine($"{key}: {section[key].Value}");
-            }
+## Addtional Documentation
 
-            // Add new setting
-            section.Add("Database", "TestDatabase");
+<!-- Links to further documentation -->
 
-            // Change existing setting
-            section["Username"].Value = "TestUser";
+## Related Packages
 
-            // Save changes to file
-            config.Save(ConfigurationSaveMode.Modified);
-            ConfigurationManager.RefreshSection(config.AppSettings.SectionInformation.Name);
-        }
-        catch (ConfigurationErrorsException ex)
-        {
-            Console.WriteLine("Error reading configuration: ");
-            Console.WriteLine(ex.Message);
-        }
-    }
-}
-```
+<!-- The related packages associated with this package -->
 
-To run this example, include an `app.config` file with the following content in your project:
+## Feedback & Contributing
 
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<configuration>
-  <appSettings>
-    <add key="Server" value="example.com"/>
-    <add key="Username" value="Admin"/>
-  </appSettings>
-</configuration>
-```
+<!-- How to provide feedback on this package and contribute to it -->

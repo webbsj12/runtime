@@ -1,62 +1,27 @@
 ## About
 
-JSON configuration provider implementation for [Microsoft.Extensions.Configuration](https://www.nuget.org/packages/Microsoft.Extensions.Configuration/). This package enables you to read your application's settings from a JSON file. You can use [JsonConfigurationExtensions.AddJsonFile](https://docs.microsoft.com/dotnet/api/microsoft.extensions.configuration.jsonconfigurationextensions.addjsonfile) extension method on `IConfigurationBuilder` to add the JSON configuration provider to the configuration builder.
+<!-- A description of the package and where one can find more documentation -->
 
-For more information, see the documentation: [JSON configuration provider](https://learn.microsoft.com/dotnet/core/extensions/configuration-providers#json-configuration-provider).
+## Key Features
 
-## Example
-The following example shows how to read application settings from the JSON configuration file.
+<!-- The key features of this package -->
 
-```cs
-using System;
-using Microsoft.Extensions.Configuration;
+## How to Use
 
-class Program
-{
-    static void Main()
-    {
-        // Build a configuration object from JSON file
-        IConfiguration config = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.json")
-            .Build();
+<!-- A compelling example on how to use this package with code, as well as any specific guidelines for when to use the package -->
 
-        // Get a configuration section
-        IConfigurationSection section = config.GetSection("Settings");
+## Main Types
 
-        // Read simple values
-        Console.WriteLine($"Server: {section["Server"]}");
-        Console.WriteLine($"Database: {section["Database"]}");
+<!-- The main types provided in this library -->
 
-        // Read a collection
-        Console.WriteLine("Ports: ");
-        IConfigurationSection ports = section.GetSection("Ports");
+## Addtional Documentation
 
-        foreach (IConfigurationSection child in ports.GetChildren())
-        {
-            Console.WriteLine(child.Value);
-        }
-    }
-}
-```
+<!-- Links to further documentation -->
 
-To run this example, include an `appsettings.json` file with the following content in your project:
+## Related Packages
 
-```json
-{
-  "Settings": {
-    "Server": "example.com",
-    "Database": "Northwind",
-    "Ports": [ 80, 81 ]
-  }
-}
-```
+<!-- The related packages associated with this package -->
 
-You can include a configuration file using a code like this in your `.csproj` file:
+## Feedback & Contributing
 
-```xml
-<ItemGroup>
-  <Content Include="appsettings.json">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-  </Content>
-</ItemGroup>
-```
+<!-- How to provide feedback on this package and contribute to it -->

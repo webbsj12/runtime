@@ -1,28 +1,27 @@
 ## About
 
-Environment variables configuration provider implementation for [Microsoft.Extensions.Configuration](https://www.nuget.org/packages/Microsoft.Extensions.Configuration/). This package enables you to read configuration parameters from environment variables. You can use [EnvironmentVariablesExtensions.AddEnvironmentVariables](https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.environmentvariablesextensions.addenvironmentvariables) extension method on `IConfigurationBuilder` to add the environment variables configuration provider to the configuration builder.
+<!-- A description of the package and where one can find more documentation -->
 
-For more information, see the documentation: [Environment variable configuration provider](https://learn.microsoft.com/dotnet/core/extensions/configuration-providers#environment-variable-configuration-provider).
+## Key Features
 
-## Example
-The following example shows how to read application configuration from environment variables.
+<!-- The key features of this package -->
 
-```cs
-using System;
-using Microsoft.Extensions.Configuration;
+## How to Use
 
-class Program
-{
-    static void Main()
-    {
-        // Build a configuration object from environment variables
-        IConfiguration config = new ConfigurationBuilder()
-            .AddEnvironmentVariables()
-            .Build();
-        
-        // Read configuration values
-        Console.WriteLine($"Server: {config["Server"]}");
-        Console.WriteLine($"Database: {config["Database"]}");
-    }
-}
-```
+<!-- A compelling example on how to use this package with code, as well as any specific guidelines for when to use the package -->
+
+## Main Types
+
+<!-- The main types provided in this library -->
+
+## Addtional Documentation
+
+<!-- Links to further documentation -->
+
+## Related Packages
+
+<!-- The related packages associated with this package -->
+
+## Feedback & Contributing
+
+<!-- How to provide feedback on this package and contribute to it -->
